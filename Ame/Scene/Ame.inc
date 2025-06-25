@@ -24,7 +24,9 @@ StreamDayWindowOffset=80
 ; ===== Window =====
 
 [Close]
-LeftMouseUpAction=[!SetOption ImageNumberCalc Formula 0][!SetOption Ame Path "#@#Images\Ame\sprites\stream"][Play "#@#Audio\endHaishin.wav"][!Redraw][!RainmeterDeactivateConfig]
+MouseOverAction=[!SetOption ImageNumberCalc Formula 0][!SetVariable SpritePath "#@#Images\Ame\sprites\"][!Redraw]
+MouseLeaveAction=[!SetOption ImageNumberCalc Formula Counter%20][!SetVariable SpritePath "#@#Images\Ame\sprites\[*Stress*]\[*Affection*]\[*Darkness*]\[*Variation*]"][!Redraw]
+LeftMouseUpAction=[!SetOption ImageNumberCalc Formula 0][!SetOption Ame Path"#@#Images\Ame\sprites\stream"][Play "#@#Audio\endHaishin.wav"][!Redraw][!RainmeterDeactivateConfig]
 
 [Settings]
 Meter=IMAGE
